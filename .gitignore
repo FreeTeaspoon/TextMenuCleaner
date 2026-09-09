@@ -1,0 +1,29 @@
+# Xiaomi firmware and signing material never go in the repo
+*.apk
+*.jks
+keystore.properties
+
+# Build output. Release zips are attached to GitHub releases instead.
+dist/
+module/webroot/
+module/payload/patcher.jar
+webui/node_modules/
+*.log
+
+# Superseded Compose companion app (replaced by the WebUI in 1.2)
+app/
+third_party/
+build.gradle.kts
+settings.gradle.kts
+gradle.properties
+gradle/
+gradlew
+gradlew.bat
+local.properties
+.gradle/
+.kotlin/
+build/
+
+# IDE
+.idea/
+*.iml

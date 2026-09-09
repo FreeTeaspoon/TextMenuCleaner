@@ -1,0 +1,48 @@
+@import url("https://mui.kernelsu.org/internal/colors.css");
+
+:root.miuix-monet,
+.miuix-monet .m-theme-light {
+  --m-color-primary: var(--primary, #6750a4);
+  --m-color-on-primary: var(--onPrimary, #ffffff);
+  --m-color-primary-variant: var(--primary, #6750a4);
+  --m-color-on-primary-variant: var(--primaryContainer, #eaddff);
+  --m-color-primary-container: var(--primaryContainer, #eaddff);
+  --m-color-on-primary-container: var(--onPrimaryContainer, #4f378b);
+  --m-color-secondary: var(--surfaceVariant, #e7e0ec);
+  --m-color-on-secondary: var(--onSurface, #1d1b20);
+  --m-color-secondary-variant: var(--surfaceContainerHigh, #ece6f0);
+  --m-color-on-secondary-variant: var(--onSurface, #1d1b20);
+  --m-color-background: var(--background, #fef7ff);
+  --m-color-on-background: var(--onBackground, #1d1b20);
+  --m-color-on-background-variant: var(--onSurfaceVariant, #49454f);
+  --m-color-surface: var(--surface, #fef7ff);
+  --m-color-on-surface: var(--onSurface, #1d1b20);
+  --m-color-on-surface-variant-summary: var(--onSurfaceVariant, #49454f);
+  --m-color-on-surface-variant-actions: var(--onSurfaceVariant, #49454f);
+  --m-color-surface-container: var(--surfaceContainer, #f3edf7);
+  --m-color-on-surface-container: var(--onSurface, #1d1b20);
+  --m-color-divider-line: var(--outlineVariant, #cac4d0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.miuix-monet,
+  .miuix-monet .m-theme-dark {
+    --m-color-primary: var(--primary, #d0bcff);
+    --m-color-on-primary: var(--onPrimary, #381e72);
+    --m-color-primary-variant: var(--primary, #d0bcff);
+    --m-color-secondary: var(--surfaceVariant, #49454f);
+    --m-color-on-secondary: var(--onSurface, #e6e0e9);
+    --m-color-secondary-variant: var(--surfaceContainerHigh, #2b2930);
+    --m-color-on-secondary-variant: var(--onSurface, #e6e0e9);
+    --m-color-background: var(--background, #141218);
+    --m-color-on-background: var(--onBackground, #e6e0e9);
+    --m-color-on-background-variant: var(--onSurfaceVariant, #cac4d0);
+    --m-color-surface: var(--surface, #141218);
+    --m-color-on-surface: var(--onSurface, #e6e0e9);
+    --m-color-on-surface-variant-summary: var(--onSurfaceVariant, #cac4d0);
+    --m-color-on-surface-variant-actions: var(--onSurfaceVariant, #cac4d0);
+    --m-color-surface-container: var(--surfaceContainer, #211f26);
+    --m-color-on-surface-container: var(--onSurface, #e6e0e9);
+    --m-color-divider-line: var(--outlineVariant, #49454f);
+  }
+}

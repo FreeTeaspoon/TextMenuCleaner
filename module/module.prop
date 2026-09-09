@@ -1,0 +1,7 @@
+id=text_menu_cleaner_global
+name=Text Menu Cleaner Global
+version=1.2
+versionCode=3
+author=freeteaspoon
+description=Hides chosen Xiaomi text-toolbar actions from shared Miuix Editor. Tap Open to pick items.
+webuiIcon=launcher.png

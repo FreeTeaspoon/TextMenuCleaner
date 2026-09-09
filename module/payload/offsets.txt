@@ -1,0 +1,5 @@
+search Lmiuix/textaction/Query; 2774760 178
+translate Lmiuix/textaction/Translate; 2776288 178
+ask Lmiuix/textaction/AskHyperXiaoai; 2767112 648
+ai_rewrite Lmiuix/textaction/AiRecognition; 2765052 812
+phrases Lmiuix/textaction/Phrases; 2773500 128

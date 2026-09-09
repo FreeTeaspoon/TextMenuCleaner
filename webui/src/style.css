@@ -1,0 +1,34 @@
+@import url("https://mui.kernelsu.org/internal/insets.css");
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--m-color-surface, #f7f7f7);
+  color: var(--m-color-on-surface, #000);
+}
+
+#app {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+:root {
+  --top-inset: var(--window-inset-top, 0px);
+  --bottom-inset: var(--window-inset-bottom, 0px);
+  /* HyperOS maps the WebView's sans-serif to the system MiSans, so no web font. */
+  font-family: "MiSans", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
