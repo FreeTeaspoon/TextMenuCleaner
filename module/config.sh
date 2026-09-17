@@ -1,6 +1,6 @@
 TARGET=/product/app/MiuixEditor/MiuixEditor.apk
-EXPECTED_BUILD=OS4.0.0.24.XPKCNXM
-STOCK_SHA=eae7c16ce451ca1ef5d3d1116582870617d597dad83d450470b356d68d1af29d
+EXPECTED_BUILD=OS4.0.0.31.XPKCNXM
+STOCK_SHA=16cd2f078ac58c79be684ed210049dfad9fe59db681cb2ef66c0e50220ab3a29
 BB=/data/adb/ksu/bin/busybox
 for candidate in \
     /data/adb/ksu/bin/busybox \

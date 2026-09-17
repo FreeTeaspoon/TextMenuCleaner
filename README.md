@@ -2,11 +2,11 @@
 
 A KernelSU/Magisk module that hides Xiaomi's own actions from the HyperOS text selection toolbar: Search, Translate, Ask, the AI rewrite pen, and Frequent phrases. Pick which ones to hide from a Miuix-styled page inside the root manager. Google Translate, ChatGPT, sharing, and the normal cut/copy/paste items are untouched.
 
-Built for one firmware: Redmi K90, HyperOS `OS4.0.0.24.XPKCNXM`, Android 17, Miuix Editor 17 (version code 37). The module refuses to activate on anything else. See [Other firmware](#other-firmware) if you want to port it.
+Built for one firmware: Redmi K90, HyperOS `OS4.0.0.31.XPKCNXM`, Android 17, Miuix Editor 17 (version code 37). The module refuses to activate on anything else. See [Other firmware](#other-firmware) if you want to port it.
 
 ## Install
 
-1. Download `TextMenuCleaner-Global-1.2.zip` from [Releases](https://github.com/FreeTeaspoon/TextMenuCleaner/releases).
+1. Download `TextMenuCleaner-Global-1.3.zip` from [Releases](https://github.com/FreeTeaspoon/TextMenuCleaner/releases).
 2. Flash it in KernelSU, Magisk, or APatch and reboot.
 3. Tap Open on the module card. Toggle the actions you want gone. Changes apply within a second.
 4. Restart any app that was already open. Its toolbar still holds the old editor until then.
@@ -62,7 +62,7 @@ bash build.sh /tmp/MiuixEditor-original.apk
 
 The stock APK is only used as a check. `build.sh` patches it twice, once with `patch_editor.py` (the reference implementation, which parses the DEX properly) and once with the on-device `MenuPatcher.java` (which uses the precomputed offsets), and fails if the two DEX files differ. The APK is not packed into the zip.
 
-`bash build.sh --pack` skips that check and just compiles the patcher, builds the WebUI, and writes `dist/TextMenuCleaner-Global-1.2.zip`.
+`bash build.sh --pack` skips that check and just compiles the patcher, builds the WebUI, and writes `dist/TextMenuCleaner-Global-1.3.zip`.
 
 `EditorProbe.java` is a runtime check for use on the device. It loads the original and patched editors with a `PathClassLoader` and calls each `onInvalidated()` without an attached editor. The originals throw `NullPointerException`; the patched ones return. It also confirms the remaining action classes still load.
 
@@ -72,9 +72,9 @@ After a HyperOS or Miuix Editor update the hash check will fail and the module w
 
 ## Tested on
 
-Redmi K90, HyperOS `OS4.0.0.24.XPKCNXM`, KernelSU.
+Redmi K90, HyperOS `OS4.0.0.31.XPKCNXM`, KernelSU.
 
-- `boot-completed.sh` logged `ACTIVE` after boot. Zygote saw the patched APK; init and Package Manager still saw stock hash `eae7c16c…`.
+- `boot-completed.sh` logged `ACTIVE` after boot. Zygote saw the patched APK; init and Package Manager still saw stock hash `16cd2f07…`.
 - Chrome's omnibox toolbar showed Select all, Cut, Copy, Share, with Google Translate and Ask ChatGPT in the overflow. Xiaomi's Search, Translate, Ask, AI pen, and Frequent phrases were gone.
 - Settings, started after activation, no longer offered Frequent phrases in its search field.
 - Apps with custom selection menus were unchanged.

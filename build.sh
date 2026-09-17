@@ -59,8 +59,8 @@ compile_patcher
 mkdir -p "$ROOT/dist"
 if [[ "${1:-}" == "--pack" ]]; then
     build_webui
-    pack_module "$ROOT/dist/TextMenuCleaner-Global-1.2.zip"
-    echo "Built $ROOT/dist/TextMenuCleaner-Global-1.2.zip"
+    pack_module "$ROOT/dist/TextMenuCleaner-Global-1.3.zip"
+    echo "Built $ROOT/dist/TextMenuCleaner-Global-1.3.zip"
     exit 0
 fi
 STOCK=${1:?Usage: build.sh /path/to/original/MiuixEditor.apk}
@@ -81,7 +81,7 @@ if left != right:
     raise SystemExit(f'Java patcher DEX differs from patch_editor.py: {left} vs {right}')
 print('Patcher DEX matches build-time editor patch')
 PY
-cp "$WORK/patched.patch.json" "$ROOT/dist/TextMenuCleaner-Global-1.2.patch.json"
+cp "$WORK/patched.patch.json" "$ROOT/dist/TextMenuCleaner-Global-1.3.patch.json"
 build_webui
-pack_module "$ROOT/dist/TextMenuCleaner-Global-1.2.zip"
-echo "Built $ROOT/dist/TextMenuCleaner-Global-1.2.zip"
+pack_module "$ROOT/dist/TextMenuCleaner-Global-1.3.zip"
+echo "Built $ROOT/dist/TextMenuCleaner-Global-1.3.zip"
