@@ -2,7 +2,6 @@
 [ "$KSU" = true ] || [ -n "${MAGISK_VER:-}" ] || [ "${APATCH:-}" = true ] || \
     abort 'This package requires KernelSU, Magisk, or APatch.'
 . "$MODPATH/config.sh"
-[ "$(getprop ro.build.version.incremental)" = "$EXPECTED_BUILD" ] || abort 'Unsupported firmware build.'
 value=$($BB nsenter -t 1 -m $BB sha256sum "$TARGET")
 [ "${value%% *}" = "$STOCK_SHA" ] || abort 'Original Miuix Editor does not match this patch.'
 set_perm_recursive "$MODPATH" 0 0 0755 0644

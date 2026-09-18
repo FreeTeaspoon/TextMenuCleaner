@@ -5,7 +5,6 @@ MODDIR=${0%/*}
 fail() { echo "SKIPPED: $*"; exit 1; }
 [ ! -e "$MODDIR/disable" ] && [ ! -e "$MODDIR/remove" ] || fail 'module disabled'
 [ "$(getprop sys.boot_completed)" = 1 ] || fail 'boot not completed'
-[ "$(getprop ro.build.version.incremental)" = "$EXPECTED_BUILD" ] || fail 'firmware changed'
 [ -x "$BB" ] || fail 'KernelSU BusyBox missing'
 editor_path=''
 for attempt in 1 2 3 4 5; do

@@ -1,5 +1,5 @@
 TARGET=/product/app/MiuixEditor/MiuixEditor.apk
-EXPECTED_BUILD=OS4.0.0.31.XPKCNXM
+# Compatibility follows the editor bytes, not the firmware build number.
 STOCK_SHA=16cd2f078ac58c79be684ed210049dfad9fe59db681cb2ef66c0e50220ab3a29
 BB=/data/adb/ksu/bin/busybox
 for candidate in \
